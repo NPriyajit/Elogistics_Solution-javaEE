@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>ELogistics</title>
+        <link rel="icon" type="image/ico" href="./images/imageicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <style>
+                
+        #overlaylog {
+        position: fixed; /* Sit on top of the page content */
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.2); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer; /* Add a pointer on hover */
+        }
+
+
+      
+            #regForm {
+            background-color: rgba(255,255,255);  
+            margin: 100px auto;
+            font-family: Raleway;
+            padding: 70px;
+            width: 45%;
+            height:390px;
+            min-width: 200px;
+            }
+
+        h1 {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  margin-top:15px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+</style>
+<style>
+    select,
+    option {
+        border-radius: 5px;
+        background-color: lightgray;
+    }
+
+    .table-borderless>tbody>tr>td,
+    .table-borderless>tbody>tr>th,
+    .table-borderless>tfoot>tr>td,
+    .table-borderless>tfoot>tr>th,
+    .table-borderless>thead>tr>td,
+    .table-borderless>thead>tr>th {
+        border: none;
+        font-size: 16px;
+    }
+
+
+    #inputes {
+        width: 55px;
+    }
+
+    #btn {
+        width: 100px;
+    }
+
+    #footer {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        bottom: 0px;
+    }
+</style>
+
+<script>
+    function onlog() {
+            document.getElementById("overlaylog").style.display = "block";
+        }
+        function offlog() {
+            document.getElementById("overlaylog").style.display = "none";
+        }</script>
+    </head>
+
+    <body onload="onlog()"  style="background-color:lightblue;">
+        <div id="overlaylog">
+            <form id="regForm" method="POST" action="login.jsp">
+                <h1>Login</h1>
+                <div class="tab1">Login Info:
+                    <p><input placeholder="Username..." name="uname"></p>
+                    <p><input placeholder="Password..." name="pword" type="password"></p>
+                </div>
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="reset" id="resetBtn" style="background-color:tomato;" onclick="reset">Reset</button>
+                        <button type="submit" id="submitBtn" onclick="submit">Submit</button>
+                    </div>
+                </div>
+        
+            </form>
+           <p class="text-muted" style="text-align:center;">&copy; 2019 Project Group All rights reserved</p></div>
+        </div>
+    </body>
+</html>

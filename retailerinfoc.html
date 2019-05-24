@@ -1,0 +1,316 @@
+<html>
+
+    <head>
+
+        <title>Retailer Form</title>
+        <link rel="icon" type="image/ico" href="./images/imageicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <style>
+
+        select, option{
+            border-radius: 5px;
+            background-color:lightgray;
+        }
+        .table-borderless > tbody > tr > td,
+        .table-borderless > tbody > tr > th,
+        .table-borderless > tfoot > tr > td,
+        .table-borderless > tfoot > tr > th,
+        .table-borderless > thead > tr > td,
+        .table-borderless > thead > tr > th {
+              border: none;
+              font-size:16px;
+          }
+          #btn, #inputes{
+           width:100px;
+              }
+
+        </style>
+
+        <div class="jumbotron" style="background-color:lightblue;  padding:25px; border-bottom: solid black;">
+        <center>  <h1>e-Logistics Solutions</h1>
+        <small>Your need Our Priority!</small></center>
+        </div>
+
+        <script>
+        function showPass(y)
+        {
+          var x = document.getElementById("pass");
+           if (x.type === "password") {
+              y.classList.toggle("glyphicon-eye-close");
+             x.type = "text";
+           } else {
+             y.classList.toggle("glyphicon-eye-close");
+             x.type = "password";
+
+           }
+        }
+        </script>
+
+        <script language="javascript">
+            function changessl()
+            {
+                var i;
+                i=document.f1.cmbssl.selectedIndex;
+                if(i==0)
+                {
+                    document.f1.urlvend.value=" ";
+                }
+                else if(i==1)
+                {
+                    document.f1.urlvend.value="http://" ;
+                }
+                else{
+                    document.f1.urlvend.value="https://";
+                }
+            }
+            function getfocus()
+            {
+                if(document.f1.urlvend.value=="")//!(document.f1.urlvend.value=='http:\\\\'|| document.f1.urlvend.value=='https:\\\\')
+                {
+                document.f1.cmbssl.focus();
+                }
+            }
+
+            function unfocus()
+            {
+                var j;
+                j=document.f1.countrycode.selectedIndex;
+                if(j==1)
+                {
+                    document.f1.numphno.value="enter 10 digit number";
+                }
+            }
+            function fun()
+            {
+
+                var v=document.f1.urlvend.value;
+                document.f1.urlvend.value=v.replace("\\","\\\\");
+                document.getElementById("myForm").submit();
+
+            }
+
+        </script>
+
+        <datalist id="cities">
+            <option value="cuttack">cuttack</option>
+            <option value="Bhubaneswar">Bhubaneswar</option>
+            <option value="sambalpur">sambalpur</option>
+            <option value="Athagarh">Athagarh</option>
+        </datalist>
+
+        <datalist id="states">
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunchal Pradesh">Arunchal Pradesh</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Odisha">Odisha</option>
+        </datalist>
+    </head>
+
+
+
+
+    <body >
+<div class="col-sm-4" style="margin-top:-10px;">
+  <p style="margin-left:15px; float:left; font-size:14px; "><a href="elog.html"><span style="padding:10px;  "
+        class="glyphicon glyphicon-home"></span>Home</a></p>
+
+  <p style="font-size:14px; margin-left:15px; float:left;"> <a href="about.html"><span style="padding:10px;  "
+        class="glyphicon glyphicon-list-alt"></span>About Us</a></p>
+
+  <p style="font-size:14px; margin-left:15px; float:left;"> <a href="contact.html"><span style="padding:10px;  "
+        class="glyphicon glyphicon-earphone"></span>Contact Us</a></p>
+
+</div>
+<div class="col-sm-4">
+
+  <h3 style="text-align:center;  margin-top: -7px; ">Retailer Information</h3>
+</div>
+
+<div class="well" style="border-top: solid black;border-bottom: solid black ; margin-top:70px;">
+
+
+    <div class="container">
+
+        <form name="f1" id="myForm" action="retailerinfos.jsp">
+            <table  class="table table-borderless ">
+                <tr>
+                    <td>
+                        Retailer Code:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text"id="inputs" class="form-control input-sm" name="txtretno"  autofocus  autocomplete="on" required>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Retailer Name:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" id="inputs" class="form-control input-sm" title="Enter your company Name" name="txtretname" required>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Contact Person:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" id="inputs" class="form-control input-sm" name="txtcontper"  autocomplete="on">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Locality:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" id="inputs" class="form-control input-sm" name="txtlocality"  list="cities">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" id="inputs" class="form-control input-sm" name="txtcity" list="cities">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        State:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" id="inputs" class="form-control input-sm" name="txtstate" list="states"  >
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone no:
+                    </td>
+                    <td>
+                      <div class="col-xs-3">
+                        <select name="countrycode" id="inputes" class="form-control input-sm" >
+                            <option>-CODE-</option>
+                            <option>+91</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-5">
+                        <input type="number"  id="inputs" class="form-control input-sm" name="numphno" title="enter your phone no" min="0"required>
+                      </div>
+                    </td>
+
+
+                    <td>
+                        Fax:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" min="0" name="txtfax" id="inputs" class="form-control input-sm"  title="enter fax number" required autocomplete="off">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                      GST no:
+                  </td>
+
+                  <td>
+                    <div class="col-xs-8">
+                      <input type="text" id="inputs" class="form-control input-sm" name="txtgst" required autocomplete="off">
+                    </div>
+                  </td>
+
+                    <td>
+                        Date:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="date" id="inputs" class="form-control input-sm" name="date" required>
+                      </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Email-ID:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="email" name="email" id="inputs" class="form-control input-sm" required title="enter a valid email">
+                      </div>
+                    </td>
+
+                    <td>
+                        Website:
+                    </td>
+                    <td>
+                      <div class="col-xs-3">
+                        <select name="cmbssl" id="combossl"id="inputs" class="form-control input-sm" onchange="changessl()">
+                            <option>-SSL-</option>
+                            <option>HTTP</option>
+                            <option>HTTPS</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-5">
+                        <input type="url" id="websitebar" id="inputs" class="form-control input-sm" name="urlvend" onfocus="getfocus()">
+                      </div>
+                    </td>
+
+                </tr>
+                <tr>
+                <td>UserName:</td>
+
+                <td>
+                  <div class="col-xs-8">
+                  <input type="text" name="txtuname" id="inputs" class="form-control input-sm" required autocomplete="off">
+                </div>
+                </td>
+
+                <td>
+                Password:</td>
+                <td>
+                  <div class="col-xs-6">
+                <input type="password" name="pass" id="pass" class="form-control input-sm" required autocomplete="off">
+              </div>
+                <div class="col-xs-2">
+              <button class="btn btn-default btn-sm reveal glyphicon glyphicon-eye-open"  type="button" onclick="showPass(this)"></button>
+               </div>
+                </td>
+                </tr>
+            </table>
+            <div class="button">
+                <input id="btn" class="btn btn-primary" type="submit" name="btnsub" value="submit" >
+                <input id="btn" class="btn btn-danger" type="reset" name="btnres" value="reset">
+                <input id="btn" class="btn btn-info" type="button" name="btnfind" value="find" onclick="window.open('retailerinfofc.jsp','_self')">
+            </div>
+
+        </form>
+  <div>
+    <p class="text-muted" style="text-align:center; font-size:16px;">&copy; 2019 Project Group All rights reserved</p>
+  </div>
+
+</div>
+    </div>
+
+
+    </body>
+
+
+</html>

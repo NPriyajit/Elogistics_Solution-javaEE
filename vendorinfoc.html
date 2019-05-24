@@ -1,0 +1,277 @@
+<html>
+
+    <head>
+        <link rel="icon" type="image/ico" href="./images/imageicon.png" />
+        <title>Vendor Form</title>
+          <link rel="icon" type="image/ico" href="./images/imageicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <style>
+
+       select, option{
+            border-radius: 5px;
+            background-color:lightgray;
+        }
+        .table-borderless > tbody > tr > td,
+        .table-borderless > tbody > tr > th,
+        .table-borderless > tfoot > tr > td,
+        .table-borderless > tfoot > tr > th,
+        .table-borderless > thead > tr > td,
+        .table-borderless > thead > tr > th {
+              border: none;
+              font-size:16px;
+          }
+          #btn{
+           width:100px;
+                  }
+
+        </style>
+
+
+
+        <script language="javascript">
+            function changessl()
+            {
+                var i;
+                i=document.f1.cmbssl.selectedIndex;
+                if(i==0)
+                {
+                    document.f1.urlvend.value=" ";
+                }
+                else if(i==1)
+                {
+                    document.f1.urlvend.value="http://" ;
+                }
+                else{
+                    document.f1.urlvend.value="https://";
+                }
+            }
+            function getfocus()
+            {
+                if(document.f1.urlvend.value=="")//!(document.f1.urlvend.value=='http:\\\\'|| document.f1.urlvend.value=='https:\\\\')
+                {
+                document.f1.cmbssl.focus();
+                }
+            }
+
+            function unfocus()
+            {
+                var j;
+                j=document.f1.countrycode.selectedIndex;
+                if(j==1)
+                {
+                    document.f1.numphno.value="enter 10 digit number";
+                }
+            }
+        </script>
+
+        <datalist id="cities">
+            <option value="cuttack">cuttack</option>
+            <option value="Bhubaneswar">Bhubaneswar</option>
+            <option value="sambalpur">sambalpur</option>
+            <option value="Athagarh">Athagarh</option>
+        </datalist>
+
+        <datalist id="states">
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunchal Pradesh">Arunchal Pradesh</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Odisha">Odisha</option>
+        </datalist>
+
+
+</head>
+    <body >
+
+      <div class="jumbotron" style="background-color:lightblue;  padding:25px; border-bottom: solid black;">
+<center>  <h1>e-Logistics Solutions</h1>
+<small>Your need Our Priority!</small></center>
+</div>
+<div class="col-sm-4" style="margin-top:-10px;">
+  <p style="margin-left:15px; float:left; font-size:14px; "><a href="elog.html"><span style="padding:10px;  "
+        class="glyphicon glyphicon-home"></span>Home</a></p>
+
+  <p style="font-size:14px; margin-left:15px; float:left;"> <a href="about.html"><span style="padding:10px;  "
+        class="glyphicon glyphicon-list-alt"></span>About Us</a></p>
+
+  <p style="font-size:14px; margin-left:15px; float:left;"> <a href="contact.html"><span style="padding:10px;  "
+        class="glyphicon glyphicon-earphone"></span>Contact Us</a></p>
+
+</div>
+<div class="col-sm-4">
+
+  <h3 style="text-align:center;  margin-top:-10px; ">Vendor Information</h3>
+</div>
+
+
+
+<div class="well" style="border-top: solid black;border-bottom: solid black ; margin-top:70px;">
+        <div class="container">
+
+        <form name="f1" id="myForm" action="vendorinfos.jsp">
+            <table class="table table-borderless ">
+                <tr>
+                    <td>
+                        Vendor Code:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" title="Enter your registration No"  name="txtvendno" id="inputs" class="form-control input-sm"  autofocus  autocomplete="on" required>
+                      </div>
+                        <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Vendor Name:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" title="Enter your company Name"  id="inputs" class="form-control input-sm"  name="txtvendname" required>
+                      </div>  <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Contact Person:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" name="txtcontper"  id="inputs" class="form-control input-sm"  autocomplete="on">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Locality:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" name="txtlocality"  id="inputs" class="form-control input-sm"  list="cities">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" name="txtcity" id="inputs" class="form-control input-sm"  list="cities">
+                      </div>
+                        <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        State:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text" name="txtstate" list="states"  id="inputs" class="form-control input-sm"  >
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone no:
+                    </td>
+                    <td>
+                      <div class="col-sm-3">
+                        <select name="countrycode" id="inputs" class="form-control input-sm">
+                            <option>-CODE-</option>
+                            <option>+91</option>
+                        </select></div>
+                        <div class="col-sm-5">
+                        <input type="number"   id="inputs" class="form-control input-sm" name="numphno" title="enter your phone no" min="0"required>
+                      </div>  <font color="red">*</font>
+                    </td>
+
+                    <td>
+                        Fax:
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                      <div class="col-sm-10">
+                        <input type="text" min="0" name="txtfax"  id="inputs" class="form-control input-sm"  required autocomplete="off">
+                       </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                      GST no:
+                  </td>
+
+                  <td>
+                    <div class="col-xs-8">
+                      <input type="text"  id="inputs" class="form-control input-sm" name="txtgst" required autocomplete="off">
+                    </div>
+                  </td>
+                    <td>
+                        Date:
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                      <div class="col-xs-10">
+                        <input type="date"  id="inputs" class="form-control input-sm" name="date" required>
+                      </div>
+                    </td>
+
+
+
+                </tr>
+                <tr>
+                    <td>
+                        Email-ID:
+                    </td>
+                    <td>
+                        <div class="col-xs-8">
+                        <input type="email" name="email" id="inputs" class="form-control input-sm" required title="enter a valid email">
+                      </div>  <font color="red">*</font>
+                    </td>
+                    <td>
+                        Website:
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="col-xs-4">
+                        <select name="cmbssl" id="combossl"  id="inputs" class="form-control input-sm" style="border-radius: 5px;"  onchange="changessl()">
+                            <option>-SSL-</option>
+                            <option>HTTP</option>
+                            <option>HTTPS</option>
+                        </select>
+                      </div>
+                        <div class="col-xs-6">
+                        <input type="url" id="inputs" class="form-control input-sm" name="urlvend" onfocus="getfocus()">
+                      </div>
+                    </td>
+
+                </tr>
+            </table>
+            <div class="btn" >
+                <input class="btn btn-primary" type="submit" name="btnsub" value="submit"  id="btn">
+                <input class="btn btn-danger" type="reset" name="btnres" value="reset"id="btn">
+                <input class="btn btn-info" type="button" name="btnfind" value="find" id="btn" onclick="window.open('vendorinfofc.jsp','_self')">
+            </div>
+
+        </form>
+
+        <div class="position-fixed">
+          <center><p class="text-muted">&copy;Project Group</p></center>
+        </div>
+
+    </div>
+</div>
+    </body>
+
+
+</html>

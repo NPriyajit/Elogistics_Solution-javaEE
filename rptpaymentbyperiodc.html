@@ -1,0 +1,86 @@
+
+
+<html>
+<title>Report Payment Information</title>
+<link rel="icon" type="image/ico" href="./images/imageicon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+
+select, option{
+    border-radius: 5px;
+    background-color:lightgray;
+}
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+      border: none;
+      font-size:16 px;
+  }
+
+  #inputes{
+   width:55 px;
+      }
+
+      #btn
+      {
+        width:100 px;
+      }
+
+</style>
+
+  <div class="jumbotron" style="background-color:lightblue;  padding:25px; border-bottom: solid black;">
+  <center>  <h1>e-Logistics Solutions</h1>
+  <small>Your need Our Priority!</small></center>
+  </div>
+<head>
+
+
+</head>
+
+<body>
+
+<h3   style="text-align:center;padding-bottom:15px;">Payment Information [Any] &nbsp;<sup><small class="text-muted">Report</small></sup></h3>
+
+  
+  <div class="well" style="border-top: solid black;border-bottom: solid black ;" >
+          <div class="container">
+
+                  <form name="f1" id="myForm" action="rptpaymentbyperiods.jsp" >
+                       <table class="table table-borderless ">
+                            <div>
+                               <tr>
+                                <td >
+                            From:
+                               <div style="padding-right:5px;">
+                                <input type="date" name="from">
+                                </div>    
+                           </td>
+
+                            <td>
+                                  </div>    
+                            To:
+                            <div style="padding-bottom:5px;">
+                            <input type="date" name="to">
+                            </div>
+                             </td>
+                            </tr>
+                          </table>
+                        <div class="btn">
+                            <input id="btn" class="btn btn-primary" type="submit" name="btnup" value="Show">
+                            <input id="btn" class="btn btn-danger" type="Reset" name="btndel" value="Reset" >
+                            
+                        </div>
+                </form>
+<div class="position-fixed">
+  <center><p class="text-muted">&copy;2019 Project Group All rights reserved</p></center>
+</div>
+
+        </div>
+</body>
+</html>

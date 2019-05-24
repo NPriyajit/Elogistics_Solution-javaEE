@@ -1,0 +1,103 @@
+<html>
+
+    <head>
+
+        <title>Product Category Details</title>
+        <link rel="icon" type="image/ico" href="./images/imageicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <style>
+
+        select, option{
+            border-radius: 5 px;
+            background-color:lightgray;
+        }
+        .table-borderless > tbody > tr > td,
+        .table-borderless > tbody > tr > th,
+        .table-borderless > tfoot > tr > td,
+        .table-borderless > tfoot > tr > th,
+        .table-borderless > thead > tr > td,
+        .table-borderless > thead > tr > th {
+              border: none;
+              font-size:16px;
+          }
+          #btn, #inputes{
+           width:100px;
+              }
+          
+        </style>
+
+</head>
+
+    <body >
+
+      <div class="jumbotron" style="background-color:lightblue;   border-bottom: solid black;">
+      <center>  <h1>e-Logistics Solutions</h1>
+      <small>Your need Our Priority!</small></center>
+      </div>
+
+
+
+      <div class="col-sm-4" style="margin-top:-10px;">
+        <p style="margin-left:15px; float:left; font-size:14px; "><a href="elog.html"><span style="padding:10px;  "
+              class="glyphicon glyphicon-home"></span>Home</a></p>
+      
+        <p style="font-size:14px; margin-left:15px; float:left;"> <a href="about.html"><span style="padding:10px;  "
+              class="glyphicon glyphicon-list-alt"></span>About Us</a></p>
+      
+        <p style="font-size:14px; margin-left:15px; float:left;"> <a href="contact.html"><span style="padding:10px;  "
+              class="glyphicon glyphicon-earphone"></span>Contact Us</a></p>
+      
+      </div>
+      <div class="col-sm-4">
+      
+        <h3 style="text-align:center;  margin-top: -7px; ">Product Category Details</h3>
+      </div>
+      
+      <div class="well" style="border-top: solid black;border-bottom: solid black ; margin-top:70px;">
+
+            <div class="container">
+
+        <form name="f1" action="productcatinfos.jsp">
+            <table class="table table-borderless " >
+              <div style="padding:32px;">
+                <tr>
+                    <td>
+                        Product Category Code:
+                    </td>
+                    <td>
+                      <div class="col-xs-8">
+                        <input type="text"    id="inputs" class="form-control input-sm"  name="txtprodcatcode"  autofocus  autocomplete="on" required>
+                      </div><font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Product Category Name:
+                    </td>
+                    <td>
+                        <div class="col-xs-8">
+                        <input type="text"   id="inputs" class="form-control input-sm"  name="txtprodcatname" required>
+                      </div><font color="red">*</font>
+                    </td>
+                </tr>
+              </div>
+            </table>
+            <div class="btn">
+                <input class="btn btn-primary" id="btn" type="submit" name="btnsub" value="submit">
+                <input class="btn btn-danger" id="btn" type="reset" name="btnres" value="reset">
+                <input class="btn btn-info" id="btn" type="button" name="btnfind" value="find" onclick="window.open('productcatinfofc.jsp')">
+            </div>
+
+        </form>
+      <div>
+        <p class="text-muted" style="text-align:center; font-size:16px;">&copy; 2019 Project Group All rights reserved</p>
+      </div>
+
+    </div>
+  </div>
+
+    </body>
+
+
+</html>
